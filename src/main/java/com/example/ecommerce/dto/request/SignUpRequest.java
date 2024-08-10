@@ -1,6 +1,5 @@
 package com.example.ecommerce.dto.request;
 
-import com.example.ecommerce.enums.UserRole;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;

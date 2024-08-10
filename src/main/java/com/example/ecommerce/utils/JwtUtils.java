@@ -1,10 +1,7 @@
 package com.example.ecommerce.utils;
 
-import com.example.ecommerce.entity.User;
 import com.example.ecommerce.repository.UserRepository;
 import com.nimbusds.jose.*;
-import com.nimbusds.jose.crypto.MACSigner;
-import com.nimbusds.jwt.JWTClaimsSet;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
