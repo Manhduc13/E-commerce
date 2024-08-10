@@ -1,7 +1,7 @@
 package com.example.ecommerce.configuration;
 
 import com.example.ecommerce.enums.UserRole;
-import com.example.ecommerce.service.UserService;
+import com.example.ecommerce.service.auth.UserService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;

@@ -1,7 +1,5 @@
-package com.example.ecommerce.service;
+package com.example.ecommerce.service.auth;
 
-import com.example.ecommerce.dto.request.SignUpRequest;
-import com.example.ecommerce.dto.response.UserResponse;
 import com.example.ecommerce.repository.UserRepository;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

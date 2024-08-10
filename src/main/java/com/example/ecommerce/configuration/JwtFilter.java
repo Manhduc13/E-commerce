@@ -1,6 +1,6 @@
 package com.example.ecommerce.configuration;
 
-import com.example.ecommerce.service.UserService;
+import com.example.ecommerce.service.auth.UserService;
 import com.example.ecommerce.utils.JwtUtils;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
