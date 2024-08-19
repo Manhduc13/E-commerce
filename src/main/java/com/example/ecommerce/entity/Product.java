@@ -19,10 +19,14 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+
     String name;
+
     @Lob
     String description;
+
     Long price;
+
     @Lob
     @Column(columnDefinition = "longblob")
     byte[] image;

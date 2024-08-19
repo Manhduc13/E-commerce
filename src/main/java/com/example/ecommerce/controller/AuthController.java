@@ -1,6 +1,7 @@
 package com.example.ecommerce.controller;
 
 import com.example.ecommerce.dto.request.AuthenticationRequest;
+import com.example.ecommerce.dto.request.SearchProductRequest;
 import com.example.ecommerce.dto.request.SignUpRequest;
 import com.example.ecommerce.dto.response.AuthenticationResponse;
 import com.example.ecommerce.dto.response.CategoryResponse;
@@ -13,6 +14,7 @@ import com.nimbusds.jose.KeyLengthException;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,6 +23,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/auth")
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+@Slf4j
 public class AuthController {
 
     AuthService authService;
@@ -50,6 +53,13 @@ public class AuthController {
     @GetMapping("/search/{name}")
     public List<ProductResponse> findAllByName(@PathVariable String name){
         return productService.findAllByNameContaining(name);
+    }
+
+    @PostMapping("/search")
+    public List<ProductResponse> search(@RequestBody SearchProductRequest request){
+        log.info("Controller: request received :category name: {}", request.getCategoryName());
+        log.info("Controller: request received :product name: {}", request.getProductName());
+        return productService.search(request);
     }
 
 }

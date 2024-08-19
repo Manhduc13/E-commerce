@@ -1,5 +1,6 @@
 package com.example.ecommerce.dto.response;
 
+import com.example.ecommerce.entity.Category;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.springframework.web.multipart.MultipartFile;
